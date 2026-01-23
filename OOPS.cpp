@@ -240,25 +240,166 @@ using namespace std;
 
 // INHERITENCE
 
-class Emp {
+// class Emp {
 
-public:
-  int empId;
-  void showId() { cout << "Employee ID: " << empId << endl; }
-};
+// public:
+//   int empId;
+//   void showId() { cout << "Employee ID: " << empId << endl; }
+// };
 
-class Salary : public Emp {
-public:
-  int salary;
+// class Salary : public Emp {
+// public:
+//   int salary;
 
-  void showSalary() { cout << "Salary: " << salary << endl; }
-};
+//   void showSalary() { cout << "Salary: " << salary << endl; }
+// };
 
-int main() {
-  Salary s;
-  s.empId = 123;
-  s.salary = 5000;
-  s.showId();
-  s.showSalary();
-  return 0;
-}
+// int main() {
+//   Salary s;
+//   s.empId = 123;
+//   s.salary = 5000;
+//   s.showId();
+//   s.showSalary();
+//   return 0;
+// }
+
+// MULTI LEVEL CLASS
+
+// example 1:-
+//   class Student {
+//   public:
+//     int roll = 1;
+//   };
+
+// class marks : public Student {
+// public:
+//   int m1 = 80, m2 = 85;
+// };
+
+// class Result : public marks {
+// public:
+//   void display() {
+//     cout << "Roll no: " << roll << endl;
+//     cout << "Total Marks: " << m1 + m2 << endl;
+//   }
+// };
+
+// int main() {
+//   Result r;
+//   r.display();
+//   return 0;
+// }
+
+// example2 :-
+//  class Student {
+//  public:
+//    int roll;
+//    void input() { cin >> roll; }
+//  };
+
+// class marks : public Student {
+// public:
+//   int python = 80, cpp = 85, HTML = 90, JS = 75;
+// };
+
+// class Result : public marks {
+// public:
+//   void display() {
+//     cout << "Roll no: " << roll << endl;
+//     cout << "Total Marks: " << python + cpp + HTML + JS << endl;
+//     cout << "Total percentage: " << ((python + cpp + HTML + JS) * 100 / 400)
+//          << endl;
+//   }
+// };
+
+// int main() {
+//   Result r;
+//   r.input();
+//   r.display();
+//   return 0;
+// }
+
+// MULTIPLE INHERITANCE WITH DATA MEMBERS
+
+// example 1:-
+
+// class Sports {
+// public:
+//   int physic;
+//   int endurance;
+//   int stamina;
+//   void input() {
+//     cout << "Please enter your physic OVR (0-100)" << endl;
+//     cin >> physic;
+//     cout << "Please enter your endurance OVR (0-100)" << endl;
+//     cin >> endurance;
+//     cout << "Please enter your stamina OVR (0-100)" << endl;
+//     cin >> stamina;
+//   }
+// };
+
+// class Academics {
+// public:
+//   int totalAcdemics;
+//   void totalAcd() {
+//     cout << "Please Enter your class academics total (0-400)" << endl;
+//     cin >> totalAcdemics;
+//   }
+// };
+
+// class Student : public Sports, public Academics {
+// public:
+//   void gtotal() {
+//     cout << "Grand Total = " << (physic + endurance + stamina) +
+//     totalAcdemics
+//          << endl;
+//   }
+// };
+
+// int main() {
+//   Student s;
+//   s.input();
+//   s.totalAcd();
+//   s.gtotal();
+//   return 0;
+// }
+
+// example3:-
+
+// class shape {
+// public:
+//   void draw() { cout << "Drawing shape" << endl; }
+// };
+
+// class Rectangle {
+// public:
+//   double length, breadth;
+
+//   void R_area() {
+//     cout << "Enter the length: " << endl;
+//     cin >> length;
+//     cout << "Enter the breadth: " << endl;
+//     cin >> breadth;
+//     cout << "Area of Rectangle = " << length * breadth << endl;
+//   }
+// };
+// class Triangle : public shape, public Rectangle {
+//   double base, height;
+
+//   void T_area() {
+//     cout << "Enter the base: " << endl;
+//     cin >> base;
+//     cout << "Enter the height: " << endl;
+//     cin >> height;
+//     cout << "Area of Triangle" << 0.5 * (base * height) << endl;
+//   }
+// };
+
+// int main() {
+//   Triangle a;
+//   a.draw();
+//   a.R_area();
+//   a.
+
+//       return 0;
+// }
