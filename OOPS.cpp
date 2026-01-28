@@ -403,3 +403,33 @@ using namespace std;
 
 //       return 0;
 // }
+
+// POLYMORPHISM
+
+// Function Overloading (compile-time)
+
+// class Calculator {
+// public:
+//   int add(int a, int b) { return a + b; };
+//   float add(float a, float b) { return a + b; }
+// };
+// int main() {
+//   Calculator c;
+//   cout << c.add(10, 20) << endl;
+//   cout << c.add(5.5f, 4.5f) << endl;
+// }
+
+// Character overloading(using characters)
+
+// class Print {
+// public:
+//   void print(char c) { cout << "Character: " << c << endl; }
+//   void print(string s) { cout << "string: " << s << endl; }
+// };
+
+// int main() {
+//   Print p;
+//   p.print('A');
+//   p.print("Hello");
+//   return 0;
+// }
