@@ -436,16 +436,121 @@ using namespace std;
 
 // OPERATOR OVERLOADING(USING OPERATORS)
 
-class Number {
+// class Number {
+// public:
+//   int x;
+
+//   Number(int a) { x = a; }
+//   Number operator+(Number obj) { return Number(x + obj.x); }
+// };
+// int main() {
+//   Number n1(10), n2(20);
+//   Number n3 = n1 + n2;
+
+//   cout << n3.x << endl;
+// }
+
+// OPERATOR OVERLOADING FOR ++(UNARY OPERATOR)
+
+// class Counter {
+// public:
+//   int count;
+//   Counter(int c) { count = c; }
+
+//   void operator++() { ++count; }
+//   void displpay() { cout << count << endl; }
+// };
+// int main() {
+//   Counter c(5);
+//   ++c;
+//   c.displpay();
+
+//   return 0;
+// }
+
+// class Counter {
+// public:
+//   int count;
+//   Counter(int c) { count = c; }
+
+//   void operator++() { count++; }
+//   void display() { cout << count << endl; }
+// };
+// int main() {
+//   Counter c(5);
+//   c++;
+//   c.display();
+
+//   return 0;
+// }
+
+// class counter {
+// public:
+//   int x;
+//   compare(int a) { x = a }
+//   bool operator > (compare obj){
+//     return x > obj.x;
+//   }
+// };
+
+// int main() {
+//   compare a(15), b(10);
+//   if (a > b)
+//     cout << "a is greater" << endl;
+//   else
+//     cout << "b is greater " << endl;
+//   return 0;
+// }
+
+// VIRTUAL FUNCTION (TURE RUN-TIME POLYMORPHISM)
+
+// class Base {
+// public:
+//   virtual void display() { cout << "This is Base class display" << endl; }
+// };
+
+// class Derived : public Base {
+// public:
+//   void display() { cout << "This is Derived class display" << endl; }
+// };
+// int main() {
+//   Base *b;
+//   Derived d;
+//   b = &d;
+//   b->display();
+
+//   return 0;
+// }
+
+class Shape {
 public:
-  int x;
-
-  Number(int a) { x = a; }
-  Number operator+(Number obj) { return Number(x + obj.x); }
+  virtual void draw() { cout << "Drawing shape" << endl; }
 };
-int main() {
-  Number n1(10), n2(20);
-  Number n3 = n1 + n2;
+class Rectangle : public Shape {
+public:
+  void draw() { cout << "Drwaing rectangle" << endl; }
+};
 
-  cout << n3.x << endl;
+class Area : public Rectangle {
+  int x;
+  int y;
+
+public:
+  void area() {
+    cout << "Enter the length: ";
+    cin >> x;
+    cout << "Enter the breath: ";
+    cin >> y;
+
+    cout << "Area of the rectangle is: " << x * y << endl;
+  }
+};
+
+int main() {
+  Shape *s;
+  Rectangle *r;
+  Area a;
+
+  r = &a;
+  a.area();
 }
